@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acharya Vishvesh - Cosmic Guide & Astrologer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for aesthetic icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define the glowing animation for the contact buttons */
+        @keyframes glowing {
+            0% { box-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
+            50% { box-shadow: 0 0 15px #ffd700, 0 0 25px #ffd700, 0 0 35px #ffcc00; }
+            100% { box-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
+        }
+
+        /* Define the page background glow effect */
+        .glowing-page-bg {
+            background: #100a1f; /* Dark Cosmic Base */
+            background-image: radial-gradient(circle at 50% 10%, rgba(255, 204, 0, 0.1), transparent 50%),
+                              radial-gradient(circle at 90% 90%, rgba(102, 0, 102, 0.1), transparent 40%),
+                              radial-gradient(circle at 10% 80%, rgba(0, 51, 102, 0.1), transparent 40%);
+        }
+        
+        /* Apply the glowing effect to the buttons */
+        .glowing-contact {
+            animation: glowing 1.5s infinite ease-in-out;
+        }
+
+        /* Style for pop-up/scroll-reveal elements */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar for a themed look */
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #1e113a;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #ffd700;
+            border-radius: 20px;
+            border: 1px solid #1e113a;
+        }
+    </style>
+</head>
+
+<body class="glowing-page-bg text-gray-100 font-sans min-h-screen">
+    
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-4 right-4 z-50 flex flex-col space-y-3">
+        <!-- WhatsApp Button (Glowing) -->
+        <a 
+            href="https://wa.me/918073418980" 
+            target="_blank"
+            class="glowing-contact bg-green-500 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+            aria-label="Contact via WhatsApp">
+            <i data-lucide="message-square" class="w-6 h-6 text-white"></i>
+        </a>
+        
+        <!-- Call Button (Glowing) -->
+        <a 
+            href="tel:+918073418980" 
+            class="glowing-contact bg-yellow-600 p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+            aria-label="Call Acharya Vishvesh">
+            <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+        </a>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-40 bg-purple-900/80 backdrop-blur-sm shadow-xl">
+        <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-yellow-400">Acharya Vishvesh</h1>
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+                <a href="#experience" class="hover:text-yellow-400 transition">Experience</a>
+                <a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-purple-800 transition">
+                <i data-lucide="menu" class="w-6 h-6 text-white"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-purple-900/95 z-40 p-8 pt-20">
+        <nav class="flex flex-col space-y-6 text-xl text-center">
+            <a href="#services" class="hover:text-yellow-400 transition">Services</a>
+            <a href="#experience" class="hover:text-yellow-400 transition">Experience</a>
+            <a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a>
+            <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-20 md:py-32 reveal-element">
+            <div class="max-w-3xl mx-auto">
+                <div class="inline-block p-4 mb-4 rounded-full border-2 border-yellow-400">
+                    <i data-lucide="star" class="w-12 h-12 text-yellow-400"></i>
+                </div>
+                <h2 class="text-5xl md:text-7xl font-extrabold text-yellow-300 leading-tight mb-4">
+                    Unveil Your Destiny. Master Your Stars.
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                    Acharya Vishvesh, a conduit between the cosmos and your life. Experience precise, ethical, and transformative guidance.
+                </p>
+                <a href="#services" class="bg-yellow-500 text-purple-900 font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-yellow-400 transition transform hover:scale-105">
+                    Explore Services
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24">
+            <h3 class="text-4xl font-bold text-center text-yellow-400 mb-12 reveal-element">Our Cosmic Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="bg-purple-800/50 p-6 rounded-xl border border-yellow-400/30 reveal-element">
+                    <i data-lucide="book-open-text" class="w-8 h-8 text-yellow-400 mb-3"></i>
+                    <h4 class="text-2xl font-semibold mb-3">Vedic Natal Chart Reading</h4>
+                    <p class="text-gray-300">A deep, 90-minute analysis of your birth chart (Janma Kundali) covering life purpose, career, relationships, and health.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-purple-800/50 p-6 rounded-xl border border-yellow-400/30 reveal-element">
+                    <i data-lucide="heart" class="w-8 h-8 text-yellow-400 mb-3"></i>
+                    <h4 class="text-2xl font-semibold mb-3">Relationship & Compatibility</h4>
+                    <p class="text-gray-300">Detailed matching (Guna Milan) for marriage and partnership, offering remedies for planetary disharmonies.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-purple-800/50 p-6 rounded-xl border border-yellow-400/30 reveal-element">
+                    <i data-lucide="briefcase" class="w-8 h-8 text-yellow-400 mb-3"></i>
+                    <h4 class="text-2xl font-semibold mb-3">Career & Financial Forecasting</h4>
+                    <p class="text-gray-300">Identifying auspicious times (Muhurta) for business launch, career change, investments, and maximizing financial growth.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience & Clients Section -->
+        <section id="experience" class="py-16 md:py-24 border-t border-yellow-400/20">
+            <h3 class="text-4xl font-bold text-center text-yellow-400 mb-12 reveal-element">A Legacy of Cosmic Insight</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Experience -->
+                <div class="reveal-element">
+                    <h4 class="text-3xl font-semibold mb-4 text-white">Experience & Accreditation</h4>
+                    <ul class="space-y-4 text-lg list-none">
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="text-yellow-400">20+ Years</strong> in the practice of Vedic, Western, and Nadi Astrology.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <span><strong class="text-yellow-400">Certified Jyotish Acharya</strong> from the Shri Vedanga Jyotish Vidyalaya, Nashik.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0"></i>
+                            <span>Authored the highly-regarded book, <em class="italic">"Planetary Harmonies: The Guide to a Balanced Life."</em></span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Clients -->
+                <div class="reveal-element">
+                    <h4 class="text-3xl font-semibold mb-4 text-white">Clients Served</h4>
+                    <div class="flex flex-wrap gap-4 text-xl text-purple-200">
+                        <span class="bg-purple-900/50 py-1 px-3 rounded-full border border-yellow-400/50">25,000+ Individual Readings</span>
+                        <span class="bg-purple-900/50 py-1 px-3 rounded-full border border-yellow-400/50">100+ Business Consultations</span>
+                        <span class="bg-purple-900/50 py-1 px-3 rounded-full border border-yellow-400/50">International Clientele (30+ Countries)</span>
+                        <span class="bg-purple-900/50 py-1 px-3 rounded-full border border-yellow-400/50">C-Level Executives</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 md:py-24 border-t border-yellow-400/20">
+            <h3 class="text-4xl font-bold text-center text-yellow-400 mb-12 reveal-element">Voices of Transformation</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-yellow-400/40 reveal-element">
+                    <i data-lucide="quote" class="w-6 h-6 text-yellow-400 mb-4"></i>
+                    <p class="italic text-gray-300 mb-4">"Acharya Vishvesh predicted a major career change exactly when my Jupiter dasha started. His timing was impeccable. I've never felt more aligned."</p>
+                    <p class="font-semibold text-yellow-300">- Ramesh K. (Bengaluru)</p>
+                    <p class="text-sm text-gray-400">Career Guidance, Sep 2023</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-yellow-400/40 reveal-element">
+                    <i data-lucide="quote" class="w-6 h-6 text-yellow-400 mb-4"></i>
+                    <p class="italic text-gray-300 mb-4">"The remedies provided for my Mars-Saturn opposition were simple yet incredibly powerful. Our family life has found a new harmony. Highly recommended."</p>
+                    <p class="font-semibold text-yellow-300">- Priya M. (New Jersey, USA)</p>
+                    <p class="text-sm text-gray-400">Relationship Compatibility, Jan 2024</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-800/50 p-6 rounded-xl border border-yellow-400/40 reveal-element">
+                    <i data-lucide="quote" class="w-6 h-6 text-yellow-400 mb-4"></i>
+                    <p class="italic text-gray-300 mb-4">"I was skeptical, but the in-depth reading covered details about my past I had never shared. A true master of the stars and a compassionate guide."</p>
+                    <p class="font-semibold text-yellow-300">- David L. (London, UK)</p>
+                    <p class="text-sm text-gray-400">Natal Chart Reading, May 2023</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Contact Section -->
+        <section id="contact" class="py-16 md:py-24 border-t border-yellow-400/20">
+            <h3 class="text-4xl font-bold text-center text-yellow-400 mb-12 reveal-element">Reach the Guiding Light</h3>
+            
+            <div class="bg-purple-900/50 p-8 md:p-12 rounded-xl shadow-2xl max-w-4xl mx-auto reveal-element">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Location -->
+                    <div>
+                        <h4 class="text-2xl font-semibold mb-3 text-white">Our Location (By Appointment Only)</h4>
+                        <p class="text-gray-300 mb-4">
+                            Acharya Vishvesh maintains a private consultancy office for scheduled personal readings.
+                        </p>
+                        <address class="not-italic text-gray-400">
+                            The Stellar Nexus Chambers,<br>
+                            B-403, The Astrological Tower,<br>
+                            Koramangala, Bengaluru, Karnataka, 560034.
+                        </address>
+                    </div>
+                    
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="text-2xl font-semibold mb-3 text-white">Direct Consultation</h4>
+                        <p class="text-gray-300 mb-4">
+                            For urgent queries or to book your session, please connect directly.
+                        </p>
+                        <div class="space-y-3">
+                            <p class="flex items-center text-lg">
+                                <i data-lucide="phone" class="w-5 h-5 text-yellow-400 mr-3"></i>
+                                Call/WhatsApp: <a href="tel:+918073418980" class="ml-2 text-yellow-300 hover:underline">+91 80734 18980</a>
+                            </p>
+                            <p class="flex items-center text-lg">
+                                <i data-lucide="mail" class="w-5 h-5 text-yellow-400 mr-3"></i>
+                                Email: <a href="mailto:acharya.vishvesh@cosmicmail.in" class="ml-2 text-yellow-300 hover:underline">acharya.vishvesh@cosmicmail.in</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 border-t border-yellow-400/20 text-gray-400">
+        <p>&copy; 2024 Acharya Vishvesh. All rights reserved. | Cosmic Guidance Since 2004.</p>
+        <p class="text-xs mt-2">All testimonials are dramatized for effect and are not actual client endorsements.</p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Toggle icon from menu to X
+            const icon = mobileMenuButton.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.outerHTML = lucide.createIcons()['menu'].toMarkup();
+            } else {
+                icon.outerHTML = lucide.createIcons()['x'].toMarkup();
+            }
+            lucide.createIcons();
+        });
+        
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.querySelector('svg').outerHTML = lucide.createIcons()['menu'].toMarkup();
+                lucide.createIcons();
+            });
+        });
+
+        // 2. Scroll Reveal/Pop-up Animations using IntersectionObserver
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Stop observing once revealed
+                }
+            });
+        }, {
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the item is visible
+        });
+
+        document.querySelectorAll('.reveal-element').forEach(element => {
+            observer.observe(element);
+        });
+        
+    </script>
+</body>
+</html>
+
